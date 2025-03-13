@@ -3,6 +3,6 @@ from .serializer import TaskSerializer
 from .models import Task
 
 # Create your views here.
-def task_view(request):
+class TaskView(viewsets.ModelViewSet):
     serializer_class = TaskSerializer
     queryset = Task.objects.all()
